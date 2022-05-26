@@ -1,0 +1,85 @@
+body {
+    background-color: cornflowerblue;
+}
+
+/* TYPEFACES */
+/* Open Sans typeface (from Font Squirrel) */
+@font-face {
+    font-family: 'OpenSansExtraBold';
+    src: url(fonts/OpenSans-ExtraBold-webfont.woff);
+}
+
+/* Roboto typeface (from Font Squirrel) */
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Light-webfont.woff);
+}
+
+/* ANIMATIONS */
+/* First word: Shrink */
+.word1 {
+    font-family: 'OpenSansExtraBold', Helvetica, sans-serif;
+    color: blue;
+    font-size: 80px;
+    width: 270px;
+    transition-property: font-size;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+
+.word1:hover {
+    font-size: 40px;
+}
+
+/* Second word: Stretch */
+.word2 {
+    font-family: 'sauna-new', Courier, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80px;
+    color: orange;
+    width: fit-content;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: linear, ease-in;
+}
+
+.word2:hover {
+    transform: scaleY(3);
+}
+
+/* Third word: Bounce */
+.word3 {
+    font-family: 'Roboto', Courier, sans-serif;
+    font-size: 80px;
+    color: greenyellow;
+    width: fit-content;
+    animation-duration: 1s;
+}
+
+.word3:hover {
+    animation-name: bounce;
+    animation-timing-function: ease-in, linear;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(50px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
